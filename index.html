@@ -1,12 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bootstrap Dashboard</title>
     <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg bg-black">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/duck.png" alt="logo" height="40" width="40" class="d-inline-block align-text-top">
+		</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active text-light" aria-current="page" href="#">Catalogo Libri</a>
+        <a class="nav-link text-white-50" href="#">Anagrafica Utenti</a>
+        <a class="nav-link text-white-50" href="#">Storico Prestiti</a>
+        <a class="nav-link text-white-50" href="#">Help</a>
+      </div>
+    </div>
+		<form class="d-flex" role="source">
+    	<input class="form-control me-2" type="source" placeholder="Cerca..." aria-label="source"/>
+      <button class="btn btn-outline-success" type="submit">Cerca</button>
+    </form>
+  </div>
+</nav>
+	<div class="container"> 
+		<div class="row my-4">
+			<div class="col-7 d-flex align-items-center" >
+				<h3>Catalogo Libri</h3>
+			</div>
+			<div class="col-2 d-flex align-items-center">
+				<button type="button" class="btn btn-primary">Aggiungi Libro</button>
+			</div>
+			<div class="col-3">
+				<div class="card" style="width: 20rem;">
+  				<div class="card-header d-flex justify-content-start">
+    				Todo
+  				</div>
+					<ul class="list-group m-3">
+ 						<li class="list-group-item d-flex justify-content-start">
+    					<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    					<label class="form-check-label" for="firstCheckbox">Chiamare segreteria</label>
+ 						</li>
+  					<li class="list-group-item d-flex justify-content-start">
+    					<input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    					<label class="form-check-label" for="secondCheckbox">Mandare avvisi prestiti scaduti</label>
+  					</li>
+  					<li class="list-group-item d-flex justify-content-start">
+    					<input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    					<label class="form-check-label" for="thirdCheckbox">Ordinare nuovi libri</label>
+  					</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<!--<div class="col-3">
+				<div class="card" style="width: 20rem;">
+  				<div class="card-header d-flex justify-content-start">
+    				F.A.Q
+  				</div>
+					<ul class="list-group list-group-flush">
+    				<li class="list-group-item">Come aggiungere un nuovo libro?</li>
+    				<li class="list-group-item">Come posso accedere all'anagrafica utenti?</li>
+    				<li class="list-group-item">Come posso usare questa Dashboard da mobile?</li>
+  				</ul>
+				</div>
+			</div>-->
+			<div class="col-9">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+      				<th scope="col">Titolo</th>
+      				<th scope="col">Data prestito</th>
+							<th scope="col">Stato</th>
+      				<th scope="col">Azioni</th>
+    				</tr>
+  				</thead>
+ 					<tbody class="table-group-divider">
+    				<tr>
+      				<td>I pilastri della terra</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>I promessi sposi</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Il signore degli anelli</td>
+      				<td>18/10/23</td>
+      				<td><span class="badge text-bg-warning">In prestito</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+						<tr>
+      				<td>Harry Potter e la pietra filosofale</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Il codice Da Vinci</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-danger">Non disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Shining</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+						<tr>
+      				<td>La divina commedia</td>
+      				<td>21/9/2023</td>
+      				<td><span class="badge text-bg-warning">In prestito</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Il trono di spade</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Il mondo di Sofia</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-danger">Non disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+						<tr>
+      				<td>Le cronache di Narnia: il leone. la strega e l'armadio</td>
+      				<td>25/07/23</td>
+      				<td><span class="badge text-bg-warning">In prestito</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>Il piccolo principe</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+    				<tr>
+      				<td>La storia infinita</td>
+      				<td>-</td>
+      				<td><span class="badge text-bg-success">Disponibile</span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fa utility-duo fa-semibold fa-pen"></i></span></td>
+							<td><span class="btn btn-outline-secondary"><i class="fas fa-trash"></i></span></td>
+    				</tr>
+  				</tbody>
+				</table>
+			</div>
+			<div class="col-3">
+				<div class="card" style="width: 20rem;">
+  				<div class="card-header d-flex justify-content-start">
+    				F.A.Q
+  				</div>
+					<ul class="list-group list-group-flush">
+    				<li class="list-group-item">Come aggiungere un nuovo libro?</li>
+    				<li class="list-group-item">Come posso accedere all'anagrafica utenti?</li>
+    				<li class="list-group-item">Come posso usare questa Dashboard da mobile?</li>
+  				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>    
 </body>
 </html>
